@@ -58,8 +58,7 @@ img {
 .icon-container {
     width: 5%;
     height: 5%;
-    margin: 0 auto;
-    margin-top: 150px;
+    margin-right: 15px;
 }
 
 p {
@@ -76,6 +75,18 @@ p {
     width: 25%;
     height: 25%;
     margin: 0 auto;
+}
+
+#home-instagram {
+    font-size: 65px;
+    margin-bottom: 25px;
+}
+
+.home-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
