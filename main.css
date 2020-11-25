@@ -23,14 +23,12 @@ nav a {
 
 }
 
-#left {
+.container {
     width: 50%;
-    float: left;
-    margin-right: 17px;
 }
 
-#right {
-    width: 50%;
+#left {
+    margin-right: 17px;
 }
 
 .vertical-shrink {
@@ -58,4 +56,21 @@ img {
     width: 5%;
     height: 5%;
     margin: 0 auto;
+    margin-top: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+
+    .photo-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    #left {
+        margin-right: 0px;
+    }
 }
