@@ -53,3 +53,9 @@ img {
 .active-link {
     color: black;
 }
+
+.icon-container {
+    width: 5%;
+    height: 5%;
+    margin: 0 auto;
+}
