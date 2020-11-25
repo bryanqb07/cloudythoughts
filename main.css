@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#left {
+    width: 50%;
+    /* float: left; */
+}
+
+#right {
+    width: 50%;
+}
+
+.vertical-shrink {
+    max-width: 75%;
+    max-height: 75%;
+} 
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 17px;
+}
+/* 
+.photo-container {
+    display: flex;
+    flex-direction: columnß;
+} */
