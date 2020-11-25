@@ -56,8 +56,8 @@ img {
 }
 
 .icon-container {
-    width: 5%;
-    height: 5%;
+    width: 4%;
+    height: 4%;
     margin-right: 15px;
 }
 
@@ -114,5 +114,9 @@ p {
     .about-icon-container {
         width: 70%;
         height: 70%;
+    }
+
+    #home-instagram {
+        font-size: 20px;
     }
 }
