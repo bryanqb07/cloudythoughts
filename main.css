@@ -6,13 +6,10 @@ nav {
     margin: 0 auto;
 }
 
-.container {
-    margin: 0 auto;
-}
-
 #left {
     width: 50%;
-    /* float: left; */
+    float: left;
+    margin-right: 17px;
 }
 
 #right {
@@ -29,8 +26,9 @@ img {
     max-height: 100%;
     margin-bottom: 17px;
 }
-/* 
 .photo-container {
     display: flex;
-    flex-direction: columnß;
-} */
+    justify-content: center;
+    margin: 0 auto;
+    width: 60%;
+}
