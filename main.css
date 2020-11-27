@@ -27,7 +27,7 @@ nav a {
 }
 
 .container {
-    width: 50%;
+    width: 450px;
 }
 
 #left {
@@ -44,11 +44,12 @@ img {
     max-height: 100%;
     margin-bottom: 17px;
 }
+
 .photo-container {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    width: 60%;
+    min-width: 900px;
 }
 
 .active-link {
@@ -90,8 +91,9 @@ p {
 }
 
 .full-image {
-    width: 60%;
-    height: 60%;
+    /* width: 60%;
+    height: 60%; */
+    width: 900px;
     margin: 0 auto;
 }
 
@@ -100,12 +102,19 @@ p {
         width: 100%;
     }
     .container {
+        min-width: 0px;
         width: 100%;
     }
 
     .photo-container {
         flex-direction: column;
         align-items: center;
+        width: 90%;
+        min-width: 0px;
+    }
+
+    .full-image {
+        min-width: 0px;
         width: 90%;
     }
 
