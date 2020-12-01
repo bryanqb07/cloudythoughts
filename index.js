@@ -20,27 +20,23 @@ var closeButton = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 closeButton.onclick = () => { 
     modal.style.display = "none"; 
-    modalImg.style.display = "none";
+    modalImg.style.display = "block";
 }
 
 
 const imgClickCallBack = (e) => {
     const img = e.target;
-
-    img.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = img.src;
-      captionText.innerHTML = "this is something cool!";
-      modalImg.style.display = "block";
-    //   captionText.innerHTML = img.alt;
-    }
+    modalImg.src = img.src;
+    modal.style.display = "block";
+    captionText.innerHTML = "this is something cool!";
+    modalImg.style.display = "block";
+//   captionText.innerHTML = img.alt;
 }
 
 const linkClickCallback = (e) => {
     toggleActiveLink(e);
     handlePageTransition(e)
 } 
-
 
 const addClickListener = (ele, cb) => {
     ele.addEventListener("click", (e) => {
