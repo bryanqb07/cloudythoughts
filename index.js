@@ -30,7 +30,7 @@ const imgClickCallBack = (e) => {
     modal.style.display = "block";
     captionText.innerHTML = "this is something cool!";
     modalImg.style.display = "block";
-//   captionText.innerHTML = img.alt;
+    captionText.innerHTML = img.alt;
 }
 
 const linkClickCallback = (e) => {
