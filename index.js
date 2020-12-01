@@ -9,9 +9,31 @@ const contactPage = document.getElementById("about-container");
 const links = [homeLink, aboutLink, contactLink]
 const imgs = document.querySelectorAll("img");
 
+
+const modal = document.getElementById("myModal");
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+// Get the <span> element that closes the modal
+var closeButton = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+closeButton.onclick = () => { 
+    modal.style.display = "none"; 
+    modalImg.style.display = "none";
+}
+
+
 const imgClickCallBack = (e) => {
     const img = e.target;
-    console.log(img.src);
+
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      captionText.innerHTML = "this is something cool!";
+      modalImg.style.display = "block";
+    //   captionText.innerHTML = img.alt;
+    }
 }
 
 const linkClickCallback = (e) => {
@@ -27,14 +49,10 @@ const addClickListener = (ele, cb) => {
     });
 }
 
-
-
 const addClickListenerToCollection = (eles, cb) => { eles.forEach(ele => addClickListener(ele, cb))};
 
 addClickListenerToCollection(imgs, imgClickCallBack);
 addClickListenerToCollection(links, linkClickCallback)
-
-
 
 const handlePageTransition = (e) => {
     const linkId = e.target.id;
