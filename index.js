@@ -6,13 +6,35 @@ const homePage = document.getElementById("home-container");
 const aboutPage = document.getElementById("about-container");
 const contactPage = document.getElementById("about-container");
 
-[homeLink, aboutLink, contactLink].forEach(link => {
-    link.addEventListener("click", (e) => {
+const links = [homeLink, aboutLink, contactLink]
+const imgs = document.querySelectorAll("img");
+
+const imgClickCallBack = (e) => {
+    const img = e.target;
+    console.log(img.src);
+}
+
+const linkClickCallback = (e) => {
+    toggleActiveLink(e);
+    handlePageTransition(e)
+} 
+
+
+const addClickListener = (ele, cb) => {
+    ele.addEventListener("click", (e) => {
         e.preventDefault();
-        toggleActiveLink(e);
-        handlePageTransition(e)
+        cb(e, ele);
     });
-});
+}
+
+
+
+const addClickListenerToCollection = (eles, cb) => { eles.forEach(ele => addClickListener(ele, cb))};
+
+addClickListenerToCollection(imgs, imgClickCallBack);
+addClickListenerToCollection(links, linkClickCallback)
+
+
 
 const handlePageTransition = (e) => {
     const linkId = e.target.id;
