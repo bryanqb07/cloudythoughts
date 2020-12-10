@@ -11,7 +11,6 @@ const imgs = document.querySelectorAll("img");
 
 
 const modal = document.getElementById("myModal");
-var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 // Get the <span> element that closes the modal
@@ -19,14 +18,36 @@ var closeButton = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 closeButton.onclick = () => { 
-    modal.style.display = "none"; 
-    modalImg.style.display = "block";
+    modal.style.display = "none";
 }
 
+const getExtension = (imageId) => {
+    switch(imageId) {
+        case "breakfast":
+        case "cloudythoughts":
+        case "indian_curry_spices":
+        case "pharmacy":
+        case "room":
+        case "yellow_cat":
+            return "JPG"
+        default:
+            return "jpg"
+        
+    }
+}
+
+const getSourceUrl = imageId => {
+    // const base = `https://cloudythoughts.s3-ap-northeast-1.amazonaws.com/${imageId}_large.`;
+    const base = `file:///Users/bryanlynch/Developer/cloudythoughts/cloudythoughts/${imageId}_large.`;
+    const extension = getExtension(imageId);
+    return base + extension;
+}
 
 const imgClickCallBack = (e) => {
     const img = e.target;
-    modalImg.src = img.src;
+    const id = img.id;
+    const imgSrc = getSourceUrl(id);
+    modalImg.src = imgSrc; 
     modal.style.display = "block";
     captionText.innerHTML = "this is something cool!";
     modalImg.style.display = "block";
