@@ -30,6 +30,8 @@ const getExtension = (imageId) => {
         case "room":
         case "yellow_cat":
             return "JPG"
+        case "maison":
+            return "jpeg"
         default:
             return "jpg"
         
@@ -37,8 +39,8 @@ const getExtension = (imageId) => {
 }
 
 const getSourceUrl = imageId => {
-    // const base = `https://cloudythoughts.s3-ap-northeast-1.amazonaws.com/${imageId}_large.`;
-    const base = `file:///Users/bryanlynch/Developer/cloudythoughts/cloudythoughts/${imageId}_large.`;
+    const base = `https://cloudythoughts.s3-ap-northeast-1.amazonaws.com/${imageId}_large.`;
+    // const base = `file:///Users/bryanlynch/Developer/cloudythoughts/photos/${imageId}_large.`;
     const extension = getExtension(imageId);
     return base + extension;
 }
