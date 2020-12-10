@@ -28,6 +28,7 @@ const getExtension = (imageId) => {
         case "indian_curry_spices":
         case "pharmacy":
         case "room":
+        case "moroccan_pool":
         case "yellow_cat":
             return "JPG"
         case "maison":
