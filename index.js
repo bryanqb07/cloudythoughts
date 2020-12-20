@@ -21,6 +21,8 @@ closeButton.onclick = () => {
     modal.style.display = "none";
 }
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 const getExtension = (imageId) => {
     switch(imageId) {
         case "breakfast":
