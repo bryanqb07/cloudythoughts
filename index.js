@@ -21,7 +21,7 @@ closeButton.onclick = () => {
     modal.style.display = "none";
 }
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault()); // disable right click to prevent simple image download
 
 const getExtension = (imageId) => {
     switch(imageId) {
