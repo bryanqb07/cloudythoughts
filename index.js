@@ -4,7 +4,7 @@ const contactLink = document.getElementById("contact-link");
 
 const homePage = document.getElementById("home-container");
 const aboutPage = document.getElementById("about-container");
-const contactPage = document.getElementById("about-container");
+const contactPage = document.getElementById("contact-container");
 
 const links = [homeLink, aboutLink, contactLink]
 const imgs = document.querySelectorAll("img");
@@ -92,13 +92,6 @@ const togglePage = (id) => {
         page.style.display =  page.id == id ? "block" : "none";
     });
 }
-
-const showHomePage = () => { 
-    console.log("home page"); 
-}
-const showAboutPage = () => { console.log("about page"); }
-const showContactPage = () => { console.log("contact page"); }
-
 
 const toggleActiveLink = (e) => {
     const id = e.target.id;
