@@ -32,11 +32,13 @@ const getExtension = (imageId) => {
         case "room":
         case "moroccan_pool":
         case "yellow_cat":
-            return "JPG"
+            return "JPG";
         case "maison":
-            return "jpeg"
+            return "jpeg";
+        case "luz_gif":
+            return "gif";
         default:
-            return "jpg"
+            return "jpg";
         
     }
 }
