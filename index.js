@@ -36,6 +36,7 @@ const getExtension = (imageId) => {
         case "maison":
             return "jpeg";
         case "luz_gif":
+        case "purple_mountain":
             return "gif";
         default:
             return "jpg";
